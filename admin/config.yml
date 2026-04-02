@@ -27,12 +27,19 @@ collections:
           - {label: "Χρώμα Φόντου", name: "background_color", widget: "color"}
           
           # --- Ενότητα Skills ---
-          - label: "Δεξιότητες (Skills)"
-            name: "skills"
+          - label: "Κατηγορίες Δεξιοτήτων (Skills Categories)"
+            name: "skill_categories"
             widget: "list"
-            summary: "{{fields.name}}"
+            summary: "{{fields.category_title}}"
             fields:
-              - {label: "Όνομα Skill", name: "name", widget: "string"}
+              - {label: "Τίτλος Κατηγορίας (π.χ. Engineering Software)", name: "category_title", widget: "string"}
+              - {label: "Εικονίδιο FontAwesome (π.χ. fas fa-cogs)", name: "icon", widget: "string", required: false}
+              - label: "Λίστα Δεξιοτήτων"
+                name: "skills_list"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - {label: "Όνομα Δεξιότητας (π.χ. AutoCAD)", name: "name", widget: "string"}
           
           # --- Ενότητα Projects ---
           - label: "Projects"

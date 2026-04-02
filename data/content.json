@@ -5,11 +5,25 @@
   "profile_image": "assets/images/profile.jpg",
   "primary_color": "#003366",
   "background_color": "#f4f4f4",
-  "skills": [
-    {"name": "Python"},
-    {"name": "Aspen Plus"},
-    {"name": "MATLAB"},
-    {"name": "AutoCAD"}
+  "skill_categories": [
+    {
+      "category_title": "Engineering Software",
+      "icon": "fas fa-cogs",
+      "skills_list": [
+        {"name": "Python"},
+        {"name": "Aspen Plus"},
+        {"name": "MATLAB"},
+        {"name": "AutoCAD"}
+      ]
+    },
+    {
+      "category_title": "Soft Skills",
+      "icon": "fas fa-lightbulb",
+      "skills_list": [
+        {"name": "Project Management"},
+        {"name": "Ομαδικότητα"}
+      ]
+    }
   ],
   "projects": [
     {

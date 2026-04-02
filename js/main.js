@@ -71,25 +71,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (profImg) profImg.src = imgPath;
             }
 
-            // 4. Update Skills dynamically
+            // 4. Update Skills dynamically with nested categories
             const skillsContainer = document.getElementById('skills-container');
-            if (skillsContainer && data.skills && Array.isArray(data.skills)) {
-                // Alter standard container to accommodate flat skill list beautifully
-                skillsContainer.style.display = 'flex';
-                skillsContainer.style.flexWrap = 'wrap';
-                skillsContainer.style.justifyContent = 'center';
-                skillsContainer.style.gap = '15px';
-                skillsContainer.innerHTML = ''; // Clear default
+            if (skillsContainer && data.skill_categories && Array.isArray(data.skill_categories)) {
                 
-                data.skills.forEach(skill => {
-                    const badge = document.createElement('span');
-                    badge.className = 'badge';
-                    // Enhancing look since they are flat items now
-                    badge.style.padding = '12px 24px';
-                    badge.style.fontSize = '1.1rem';
-                    badge.style.boxShadow = 'var(--shadow-sm)';
-                    badge.innerText = skill.name;
-                    skillsContainer.appendChild(badge);
+                // Clear any inline styles that made it a flat list previously
+                skillsContainer.style.display = '';
+                skillsContainer.style.flexWrap = '';
+                skillsContainer.style.justifyContent = '';
+                skillsContainer.style.gap = '';
+                skillsContainer.className = 'skills-grid'; // Assure CSS applies
+                
+                skillsContainer.innerHTML = ''; 
+                
+                data.skill_categories.forEach(cat => {
+                    const iconClass = cat.icon || "fas fa-check-circle";
+                    let badgesHtml = '';
+                    if (cat.skills_list && Array.isArray(cat.skills_list)) {
+                        cat.skills_list.forEach(skill => {
+                            badgesHtml += `<span class="badge">${skill.name}</span>`;
+                        });
+                    }
+
+                    const catHtml = `
+                        <div class="skill-category">
+                            <div class="skill-icon"><i class="${iconClass}"></i></div>
+                            <h3>${cat.category_title}</h3>
+                            <div class="badges">
+                                ${badgesHtml}
+                            </div>
+                        </div>
+                    `;
+                    skillsContainer.innerHTML += catHtml;
                 });
             }
 
