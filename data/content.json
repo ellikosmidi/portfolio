@@ -23,8 +23,12 @@
       "category_title": "Engineering Software",
       "icon_image": "assets/images/project1.jpg",
       "skills_list": [
-        {"name": "Python"},
-        {"name": "Aspen Plus"}
+        {
+          "name": "Python"
+        },
+        {
+          "name": "Aspen Plus"
+        }
       ]
     }
   ],

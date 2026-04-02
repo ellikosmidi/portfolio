@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navLinks = document.getElementById('nav-links');
 
-    if(mobileMenuBtn) {
+    if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
         });
@@ -59,30 +59,30 @@ document.addEventListener('DOMContentLoaded', () => {
             // 1. Theme Configuration
             if (data.primary_color) document.documentElement.style.setProperty('--primary', data.primary_color);
             if (data.background_color) document.documentElement.style.setProperty('--bg-main', data.background_color);
-            
+
             // 2. Navbar & Logo
-            if(data.logo_text) { const ntxt = document.getElementById('nav-logo-text'); if (ntxt) ntxt.innerText = data.logo_text; }
-            if(data.logo_color) { 
-                const nlogo = document.getElementById('nav-logo'); 
+            if (data.logo_text) { const ntxt = document.getElementById('nav-logo-text'); if (ntxt) ntxt.innerText = data.logo_text; }
+            if (data.logo_color) {
+                const nlogo = document.getElementById('nav-logo');
                 const ntxt = document.getElementById('nav-logo-text');
-                if (nlogo) nlogo.style.color = data.logo_color; 
+                if (nlogo) nlogo.style.color = data.logo_color;
                 if (ntxt) ntxt.style.color = data.logo_color;
             }
-            if(data.logo_image) {
+            if (data.logo_image) {
                 const nimg = document.getElementById('nav-logo-img');
                 if (nimg) {
                     let imgPath = data.logo_image;
-                    if(imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
+                    if (imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
                     nimg.src = imgPath;
                     nimg.style.display = 'block';
                 }
             }
-            
-            if(data.nav_about_text) { const el = document.getElementById('nav-about'); if (el) el.innerText = data.nav_about_text; }
-            if(data.nav_skills_text) { const el = document.getElementById('nav-skills'); if (el) el.innerText = data.nav_skills_text; }
-            if(data.nav_projects_text) { const el = document.getElementById('nav-projects'); if (el) el.innerText = data.nav_projects_text; }
-            if(data.nav_experience_text) { const el = document.getElementById('nav-experience'); if (el) el.innerText = data.nav_experience_text; }
-            if(data.nav_contact_text) { const el = document.getElementById('nav-contact'); if (el) el.innerText = data.nav_contact_text; }
+
+            if (data.nav_about_text) { const el = document.getElementById('nav-about'); if (el) el.innerText = data.nav_about_text; }
+            if (data.nav_skills_text) { const el = document.getElementById('nav-skills'); if (el) el.innerText = data.nav_skills_text; }
+            if (data.nav_projects_text) { const el = document.getElementById('nav-projects'); if (el) el.innerText = data.nav_projects_text; }
+            if (data.nav_experience_text) { const el = document.getElementById('nav-experience'); if (el) el.innerText = data.nav_experience_text; }
+            if (data.nav_contact_text) { const el = document.getElementById('nav-contact'); if (el) el.innerText = data.nav_contact_text; }
 
             // 3. Hero Section
             if (data.name) document.getElementById('hero-name').innerText = data.name;
@@ -90,16 +90,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.bio) document.getElementById('hero-bio').innerText = data.bio;
             if (data.hero_btn_projects_text) {
                 const btnP = document.getElementById('hero-btn-projects');
-                if(btnP) btnP.innerText = data.hero_btn_projects_text;
+                if (btnP) btnP.innerText = data.hero_btn_projects_text;
             }
             if (data.hero_btn_contact_text) {
                 const btnC = document.getElementById('hero-btn-contact');
-                if(btnC) btnC.innerText = data.hero_btn_contact_text;
+                if (btnC) btnC.innerText = data.hero_btn_contact_text;
             }
 
             if (data.profile_image) {
                 let imgPath = data.profile_image;
-                if(imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
+                if (imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
                 const profImg = document.getElementById('profile-img');
                 if (profImg) profImg.src = imgPath;
             }
@@ -116,13 +116,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 skillsContainer.style.justifyContent = '';
                 skillsContainer.style.gap = '';
                 skillsContainer.className = 'skills-grid';
-                skillsContainer.innerHTML = ''; 
-                
+                skillsContainer.innerHTML = '';
+
                 data.skill_categories.forEach(cat => {
                     let iconHtml = '';
                     if (cat.icon_image) {
                         let imgPath = cat.icon_image;
-                        if(imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
+                        if (imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
                         iconHtml = `<div style="text-align: center; margin-bottom: 20px;"><img src="${imgPath}" alt="${cat.category_title}" style="max-width: 70px; max-height: 70px; width: auto; height: auto; border-radius: 10px; margin: 0 auto;"></div>`;
                     }
                     let badgesHtml = '';
@@ -145,13 +145,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // 5. Projects Section
-            if(data.projects_section_title) {
+            if (data.projects_section_title) {
                 const ts = document.getElementById('projects-section-title');
-                if(ts) ts.innerHTML = data.projects_section_title;
+                if (ts) ts.innerHTML = data.projects_section_title;
             }
-            if(data.projects_title_color) {
+            if (data.projects_title_color) {
                 const tc = document.getElementById('projects-section-title');
-                if(tc) tc.style.color = data.projects_title_color;
+                if (tc) tc.style.color = data.projects_title_color;
             }
 
             const projectsContainer = document.getElementById('projects-container');
@@ -161,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 data.projects.forEach((proj, index) => {
                     let imgPath = proj.image;
-                    if(imgPath && imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
-                    
+                    if (imgPath && imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
+
                     const card = document.createElement('div');
                     card.className = 'card';
                     card.dataset.projectIdx = index;
@@ -179,13 +179,13 @@ document.addEventListener('DOMContentLoaded', () => {
             bindModalLogic(data.projects || []);
 
             // 6. Experience Section
-            if(data.experience_section_title) {
+            if (data.experience_section_title) {
                 const ts = document.getElementById('experience-section-title');
-                if(ts) ts.innerHTML = data.experience_section_title;
+                if (ts) ts.innerHTML = data.experience_section_title;
             }
-            if(data.experience_title_color) {
+            if (data.experience_title_color) {
                 const tc = document.getElementById('experience-section-title');
-                if(tc) tc.style.color = data.experience_title_color;
+                if (tc) tc.style.color = data.experience_title_color;
             }
 
             const expContainer = document.getElementById('experience-container');
@@ -207,17 +207,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // 7. Contact Section
-            if(data.contact_section_title) {
+            if (data.contact_section_title) {
                 const cs = document.getElementById('contact-section-title');
-                if(cs) cs.innerHTML = data.contact_section_title;
+                if (cs) cs.innerHTML = data.contact_section_title;
             }
-            if(data.contact_title_color) {
+            if (data.contact_title_color) {
                 const cc = document.getElementById('contact-section-title');
-                if(cc) cc.style.color = data.contact_title_color;
+                if (cc) cc.style.color = data.contact_title_color;
             }
-            if(data.contact_section_desc) {
+            if (data.contact_section_desc) {
                 const cd = document.getElementById('contact-section-desc');
-                if(cd) cd.innerText = data.contact_section_desc;
+                if (cd) cd.innerText = data.contact_section_desc;
             }
 
             const contactLinks = document.getElementById('contact-links-container');
@@ -236,21 +236,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const cvContainer = document.getElementById('cv-container');
             if (cvContainer && data.cv_file) {
-                 let cvPath = data.cv_file;
-                 if(cvPath.startsWith('/assets')) cvPath = cvPath.substring(1);
-                 let btnText = data.cv_button_text || "Download Full CV (PDF)";
-                 let btnStyle = data.cv_button_color ? `style="background-color: ${data.cv_button_color}; border-color: ${data.cv_button_color}; color: white;"` : '';
-                 cvContainer.innerHTML = `<a href="${cvPath}" class="btn btn-accent" download target="_blank" ${btnStyle}><i class="fas fa-file-pdf"></i> ${btnText}</a>`;
+                let cvPath = data.cv_file;
+                if (cvPath.startsWith('/assets')) cvPath = cvPath.substring(1);
+                let btnText = data.cv_button_text || "Download Full CV (PDF)";
+                let btnStyle = data.cv_button_color ? `style="background-color: ${data.cv_button_color}; border-color: ${data.cv_button_color}; color: white;"` : '';
+                cvContainer.innerHTML = `<a href="${cvPath}" class="btn btn-accent" download target="_blank" ${btnStyle}><i class="fas fa-file-pdf"></i> ${btnText}</a>`;
             }
 
             const copyrightContainer = document.getElementById('copyright-container');
             if (copyrightContainer && data.copyright_year && data.name) {
-                 copyrightContainer.innerHTML = `<p>&copy; ${data.copyright_year} ${data.name}</p>`;
+                copyrightContainer.innerHTML = `<p>&copy; ${data.copyright_year} ${data.name}</p>`;
             }
         })
         .catch(err => console.error("CMS integration error:", err));
 
-    
+
     // Function to attach Event Listeners to Modals dynamically
     function bindModalLogic(projects) {
         const modal = document.getElementById('project-modal');
@@ -264,10 +264,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const card = e.target.closest('.card');
                 const pIdx = card.dataset.projectIdx;
                 const proj = projects[pIdx];
-                
+
                 if (proj) {
                     mTitle.textContent = proj.title;
-                    
+
                     // Rendering Problem, Approach, Result sections:
                     modalBody.innerHTML = `
                         ${proj.problem ? `
@@ -288,14 +288,14 @@ document.addEventListener('DOMContentLoaded', () => {
                             <p>${proj.result}</p>
                         </div>` : ''}
                     `;
-                    
+
                     if (proj.github_link) {
                         mLink.style.display = 'flex';
                         mLink.href = proj.github_link;
                     } else {
                         mLink.style.display = 'none';
                     }
-                    
+
                     modal.style.display = 'flex';
                     setTimeout(() => { modal.style.opacity = '1'; }, 10);
                 }
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => { modal.style.display = 'none'; }, 300);
         };
 
-        if(modalClose) {
+        if (modalClose) {
             modalClose.addEventListener('click', closeModal);
         }
         window.addEventListener('click', (e) => {
