@@ -143,17 +143,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const projectsContainer = document.getElementById('projects-container');
             if (projectsContainer && data.projects && Array.isArray(data.projects)) {
                 projectsContainer.innerHTML = '';
+                const pBtnText = data.projects_button_text || "Λεπτομέρειες";
+                const pBtnStyle = data.projects_button_color ? `style="background-color: ${data.projects_button_color}; border-color: ${data.projects_button_color}; color: white;"` : '';
+
                 data.projects.forEach((proj, index) => {
                     let imgPath = proj.image;
                     if(imgPath && imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
                     
                     const card = document.createElement('div');
                     card.className = 'card';
+                    card.dataset.projectIdx = index;
                     card.innerHTML = `
                         <img src="${imgPath}" alt="${proj.title}" class="card-img">
                         <div class="card-content">
                             <h3 class="card-title">${proj.title}</h3>
-                            <button class="btn btn-outline open-modal" data-index="${index}">Λεπτομέρειες</button>
+                            <button class="btn btn-primary open-modal" data-index="${index}" ${pBtnStyle}>${pBtnText}</button>
                         </div>
                     `;
                     projectsContainer.appendChild(card);
@@ -222,7 +226,8 @@ document.addEventListener('DOMContentLoaded', () => {
                  let cvPath = data.cv_file;
                  if(cvPath.startsWith('/assets')) cvPath = cvPath.substring(1);
                  let btnText = data.cv_button_text || "Download Full CV (PDF)";
-                 cvContainer.innerHTML = `<a href="${cvPath}" class="btn btn-accent" download target="_blank"><i class="fas fa-file-pdf"></i> ${btnText}</a>`;
+                 let btnStyle = data.cv_button_color ? `style="background-color: ${data.cv_button_color}; border-color: ${data.cv_button_color}; color: white;"` : '';
+                 cvContainer.innerHTML = `<a href="${cvPath}" class="btn btn-accent" download target="_blank" ${btnStyle}><i class="fas fa-file-pdf"></i> ${btnText}</a>`;
             }
 
             const copyrightContainer = document.getElementById('copyright-container');
@@ -250,11 +255,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (proj) {
                     mTitle.textContent = proj.title;
                     
-                    // The CMS provides one big text element, rendering it neatly:
+                    // Rendering Problem, Approach, Result sections:
                     modalBody.innerHTML = `
-                        <div class="modal-section" style="margin-top: 15px;">
-                            <p style="white-space: pre-wrap; font-size: 1.05rem;">${proj.description}</p>
-                        </div>
+                        ${proj.problem ? `
+                        <div class="modal-section">
+                            <h4><i class="fas fa-exclamation-circle"></i> Πρόβλημα</h4>
+                            <p>${proj.problem}</p>
+                        </div>` : ''}
+                        
+                        ${proj.approach ? `
+                        <div class="modal-section">
+                            <h4><i class="fas fa-tools"></i> Προσέγγιση</h4>
+                            <p>${proj.approach}</p>
+                        </div>` : ''}
+
+                        ${proj.result ? `
+                        <div class="modal-section">
+                            <h4><i class="fas fa-check-circle"></i> Αποτέλεσμα</h4>
+                            <p>${proj.result}</p>
+                        </div>` : ''}
                     `;
                     
                     if (proj.github_link) {

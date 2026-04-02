@@ -58,14 +58,18 @@ collections:
           # --- Ενότητα Projects ---
           - {label: "Τίτλος Ενότητας Projects", name: "projects_section_title", widget: "string", required: false}
           - {label: "Χρώμα Τίτλου Projects", name: "projects_title_color", widget: "color", required: false}
+          - {label: "Κείμενο Κουμπιού Λεπτομερειών Κάρτας", name: "projects_button_text", widget: "string", required: false}
+          - {label: "Χρώμα Κουμπιού Λεπτομερειών Κάρτας", name: "projects_button_color", widget: "color", required: false}
           - label: "Projects"
             name: "projects"
             widget: "list"
             summary: "{{fields.title}}"
             fields:
               - {label: "Τίτλος Project", name: "title", widget: "string"}
-              - {label: "Περιγραφή", name: "description", widget: "text"}
               - {label: "Εικόνα", name: "image", widget: "image"}
+              - {label: "Πρόβλημα (Problem)", name: "problem", widget: "text"}
+              - {label: "Προσέγγιση (Approach)", name: "approach", widget: "text"}
+              - {label: "Αποτέλεσμα (Result)", name: "result", widget: "text"}
               - {label: "Link στο GitHub", name: "github_link", widget: "string", required: false}
 
           # --- Ενότητα Εμπειρία & Εκπαίδευση ---
@@ -89,4 +93,5 @@ collections:
           - {label: "GitHub Link", name: "github", widget: "string", required: false}
           - {label: "Αρχείο Βιογραφικού PDF", name: "cv_file", widget: "file", required: false}
           - {label: "Κείμενο Κουμπιού Κατεβάσματος", name: "cv_button_text", widget: "string", required: false}
+          - {label: "Χρώμα Κουμπιού Κατεβάσματος", name: "cv_button_color", widget: "color", required: false}
           - {label: "Έτος Copyright", name: "copyright_year", widget: "string", required: false}

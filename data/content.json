@@ -29,10 +29,14 @@
   ],
   "projects_section_title": "Επιλεγμένα Projects",
   "projects_title_color": "#333333",
+  "projects_button_text": "Λεπτομέρειες",
+  "projects_button_color": "#d35400",
   "projects": [
     {
       "title": "Σχεδιασμός Μονάδας",
-      "description": "Βελτιστοποίηση διεργασίας απόσταξης.",
+      "problem": "Υψηλό ενεργειακό κόστος απόσταξης.",
+      "approach": "Χρήση Aspen Plus για προσομοίωση εναλλακτικών.",
+      "result": "Μείωση ενεργειακού κόστους κατά 15%.",
       "image": "assets/images/project1.jpg"
     }
   ],
@@ -50,5 +54,6 @@
   "contact_section_desc": "Ενδιαφέρεστε για συνεργασία ή θέλετε να συζητήσουμε επαγγελματικές ευκαιρίες; Θα χαρώ να επικοινωνήσουμε!",
   "email": "tsokas.aris.nik@gmail.com",
   "cv_button_text": "Download Full CV (PDF)",
+  "cv_button_color": "#d35400",
   "copyright_year": "2026"
 }
