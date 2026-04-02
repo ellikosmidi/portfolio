@@ -131,8 +131,8 @@ img {
 .btn-project {
     position: relative;
     background-color: transparent !important;
-    border: 2px solid var(--btn-color, var(--primary)) !important;
-    color: var(--btn-color, var(--primary)) !important;
+    border: 2px solid var(--primary) !important;
+    color: var(--primary) !important;
     overflow: hidden;
     z-index: 1;
     transition: color 0.4s ease-in-out;
@@ -142,7 +142,7 @@ img {
     position: absolute;
     top: 0; left: 0; bottom: 0;
     width: 0%;
-    background-color: var(--btn-color, var(--primary));
+    background-color: var(--primary);
     z-index: -1;
     transition: width 0.4s ease-in-out;
 }

@@ -158,7 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (projectsContainer && data.projects && Array.isArray(data.projects)) {
                 projectsContainer.innerHTML = '';
                 const pBtnText = data.projects_button_text || "Λεπτομέρειες";
-                const pBtnCSSVar = data.projects_button_color ? `--btn-color: ${data.projects_button_color};` : '';
 
                 data.projects.forEach((proj, index) => {
                     let imgPath = proj.image;
@@ -171,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <img src="${imgPath}" alt="${proj.title}" class="card-img">
                         <div class="card-content">
                             <h3 class="card-title">${proj.title}</h3>
-                            <button class="btn btn-project open-modal" style="${pBtnCSSVar}" data-index="${index}">${pBtnText}</button>
+                            <button class="btn btn-project open-modal" data-index="${index}">${pBtnText}</button>
                         </div>
                     `;
                     projectsContainer.appendChild(card);

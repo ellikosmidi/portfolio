@@ -60,7 +60,6 @@ collections:
           - {label: "Τίτλος Ενότητας Projects", name: "projects_section_title", widget: "string", required: false}
           - {label: "Χρώμα Τίτλου Projects", name: "projects_title_color", widget: "color", required: false}
           - {label: "Κείμενο Κουμπιού Λεπτομερειών Κάρτας", name: "projects_button_text", widget: "string", required: false}
-          - {label: "Χρώμα Κουμπιού Λεπτομερειών Κάρτας", name: "projects_button_color", widget: "color", required: false}
           - label: "Projects"
             name: "projects"
             widget: "list"
