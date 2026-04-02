@@ -177,6 +177,16 @@ img {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-img {
+    height: 1.15em;
+    width: 1.15em;
+    border-radius: 50%;
+    object-fit: cover;
+    display: none;
 }
 .logo span {
     color: var(--accent);

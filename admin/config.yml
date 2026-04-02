@@ -21,6 +21,7 @@ collections:
           - {label: "Χρώμα Φόντου Σελίδας", name: "background_color", widget: "color"}
 
           # --- Ενότητα Navbar (Μενού & Logo) ---
+          - {label: "Εικόνα Λογότυπου", name: "logo_image", widget: "image", required: false}
           - {label: "Κείμενο Λογότυπου", name: "logo_text", widget: "string"}
           - {label: "Χρώμα Λογότυπου", name: "logo_color", widget: "color", required: false}
           - {label: "Κείμενο Link: Σχετικά", name: "nav_about_text", widget: "string", required: false}

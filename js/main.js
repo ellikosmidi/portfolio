@@ -61,8 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.background_color) document.documentElement.style.setProperty('--bg-main', data.background_color);
             
             // 2. Navbar & Logo
-            if(data.logo_text) { const nlogo = document.getElementById('nav-logo'); if (nlogo) nlogo.innerText = data.logo_text; }
+            if(data.logo_text) { const ntxt = document.getElementById('nav-logo-text'); if (ntxt) ntxt.innerText = data.logo_text; }
             if(data.logo_color) { const nlogo = document.getElementById('nav-logo'); if (nlogo) nlogo.style.color = data.logo_color; }
+            if(data.logo_image) {
+                const nimg = document.getElementById('nav-logo-img');
+                if (nimg) {
+                    let imgPath = data.logo_image;
+                    if(imgPath.startsWith('/assets')) imgPath = imgPath.substring(1);
+                    nimg.src = imgPath;
+                    nimg.style.display = 'block';
+                }
+            }
             
             if(data.nav_about_text) { const el = document.getElementById('nav-about'); if (el) el.innerText = data.nav_about_text; }
             if(data.nav_skills_text) { const el = document.getElementById('nav-skills'); if (el) el.innerText = data.nav_skills_text; }
