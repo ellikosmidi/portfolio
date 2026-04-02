@@ -62,7 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // 2. Navbar & Logo
             if(data.logo_text) { const ntxt = document.getElementById('nav-logo-text'); if (ntxt) ntxt.innerText = data.logo_text; }
-            if(data.logo_color) { const nlogo = document.getElementById('nav-logo'); if (nlogo) nlogo.style.color = data.logo_color; }
+            if(data.logo_color) { 
+                const nlogo = document.getElementById('nav-logo'); 
+                const ntxt = document.getElementById('nav-logo-text');
+                if (nlogo) nlogo.style.color = data.logo_color; 
+                if (ntxt) ntxt.style.color = data.logo_color;
+            }
             if(data.logo_image) {
                 const nimg = document.getElementById('nav-logo-img');
                 if (nimg) {
