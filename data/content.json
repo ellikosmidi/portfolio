@@ -1,0 +1,39 @@
+{
+  "name": "Άρης Τσόκας",
+  "job_title": "Χημικός Μηχανικός | Process Engineer",
+  "bio": "Εξειδικεύομαι στη βελτιστοποίηση χημικών διεργασιών και την ανάλυση δεδομένων παραγωγής.",
+  "profile_image": "assets/images/profile.jpg",
+  "primary_color": "#003366",
+  "background_color": "#f4f4f4",
+  "skills": [
+    {"name": "Python"},
+    {"name": "Aspen Plus"},
+    {"name": "MATLAB"},
+    {"name": "AutoCAD"}
+  ],
+  "projects": [
+    {
+      "title": "Σχεδιασμός Μονάδας Απόσταξης",
+      "description": "Βελτιστοποίηση διεργασίας απόσταξης για εξοικονόμηση ενέργειας.",
+      "image": "assets/images/project1.jpg",
+      "github_link": "https://github.com/aris-tsokas"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Junior Process Engineer",
+      "subtitle": "ChemCorp Industries | 2022 - Σήμερα",
+      "description": "Παρακολούθηση και βελτιστοποίηση παραγωγής 3 βιομηχανικών γραμμών."
+    },
+    {
+      "title": "Δίπλωμα Χημικού Μηχανικού",
+      "subtitle": "Πανεπιστήμιο Πατρών | 2020 - 2025",
+      "description": "Κατεύθυνση: Επιστήμη και Μηχανική Υλικών."
+    }
+  ],
+  "email": "tsokas.aris.nik@gmail.com",
+  "linkedin": "https://linkedin.com",
+  "github": "https://github.com",
+  "cv_file": "assets/docs/CV.pdf",
+  "copyright_year": "2026"
+}

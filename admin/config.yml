@@ -1,0 +1,63 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "settings"
+    label: "Διαχείριση Περιεχομένου"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "portfolio"
+        label: "Στοιχεία Portfolio"
+        file: "data/content.json"
+        fields:
+          # --- Ενότητα Hero ---
+          - {label: "Όνομα", name: "name", widget: "string"}
+          - {label: "Επαγγελματικός Τίτλος", name: "job_title", widget: "string"}
+          - {label: "Bio (Σύντομο)", name: "bio", widget: "text"}
+          - {label: "Φωτογραφία Προφίλ", name: "profile_image", widget: "image"}
+          
+          # --- Ενότητα Theme (Χρώματα) ---
+          - {label: "Χρώμα Θέματος (Buttons/Links)", name: "primary_color", widget: "color"}
+          - {label: "Χρώμα Φόντου", name: "background_color", widget: "color"}
+          
+          # --- Ενότητα Skills ---
+          - label: "Δεξιότητες (Skills)"
+            name: "skills"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Όνομα Skill", name: "name", widget: "string"}
+          
+          # --- Ενότητα Projects ---
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Τίτλος Project", name: "title", widget: "string"}
+              - {label: "Περιγραφή", name: "description", widget: "text"}
+              - {label: "Εικόνα", name: "image", widget: "image"}
+              - {label: "Link στο GitHub", name: "github_link", widget: "string", required: false}
+
+          # --- Ενότητα Εμπειρία & Εκπαίδευση ---
+          - label: "Χρονολόγιο (Timeline Εμπειρίας/Εκπαίδευσης)"
+            name: "experience"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - {label: "Ρόλος / Πτυχίο", name: "title", widget: "string"}
+              - {label: "Εταιρεία / Πανεπιστήμιο & Έτος", name: "subtitle", widget: "string"}
+              - {label: "Περιγραφή (Bullet points ή κείμενο)", name: "description", widget: "text"}
+
+          # --- Ενότητα Επικοινωνία ---
+          - {label: "Email", name: "email", widget: "string", required: false}
+          - {label: "LinkedIn Link", name: "linkedin", widget: "string", required: false}
+          - {label: "GitHub Link", name: "github", widget: "string", required: false}
+          - {label: "Αρχείο Βιογραφικού PDF", name: "cv_file", widget: "file", required: false}
+          - {label: "Έτος Copyright", name: "copyright_year", widget: "string", required: false}

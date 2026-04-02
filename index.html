@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Άρης Τσόκας | Χημικός Μηχανικός & Process Engineer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome για Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+    <!-- 1. Navigation Bar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Aris<span>.</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <section id="about" class="hero section">
+        <div class="container hero-container">
+            <div class="hero-image">
+                <!-- Fallback σε Unsplash Placeholder αν η τοπική εικόνα απουσιάζει -->
+                <img id="profile-img" src="assets/images/profile.jpg" alt="Επαγγελματική Φωτογραφία" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80'">
+            </div>
+            <div class="hero-content">
+                <h1 id="hero-name">Άρης Τσόκας</h1>
+                <h2 id="hero-job">Χημικός Μηχανικός | Process Engineer</h2>
+                <p id="hero-bio">Εξειδικεύομαι στη βελτιστοποίηση χημικών διεργασιών και την ανάλυση δεδομένων παραγωγής, με έμφαση στην αειφορία και την αποδοτικότητα. Σχεδιάζω λύσεις που μειώνουν το κόστος και αυξάνουν την ποιότητα.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Προβολή Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Επικοινωνία</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Core Skills -->
+    <section id="skills" class="skills section bg-light">
+        <div class="container">
+            <h2 class="section-title">Core <span>Skills</span></h2>
+            <div id="skills-container" class="skills-grid">
+                <!-- Τα skills θα φορτωθούν δυναμικά από το JS (Netlify CMS) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Projects Grid -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <h2 class="section-title">Επιλεγμένα <span>Projects</span></h2>
+            <div id="projects-container" class="projects-grid">
+                <!-- Τα projects θα φορτωθούν δυναμικά από το JS (Netlify CMS) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Experience & Education Timeline -->
+    <section id="experience" class="timeline-section section bg-light">
+        <div class="container">
+            <h2 class="section-title">Εμπειρία & <span>Εκπαίδευση</span></h2>
+            <div id="experience-container" class="timeline">
+                <!-- Data loaded via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Contact & Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2 class="section-title text-white">Επικοινωνία</h2>
+            <p class="footer-desc">Ενδιαφέρεστε για συνεργασία ή θέλετε να συζητήσουμε επαγγελματικές ευκαιρίες; Θα χαρώ να επικοινωνήσουμε!</p>
+            
+            <div id="contact-links-container" class="contact-links">
+                <!-- Data loaded via JS -->
+            </div>
+
+            <div id="cv-container" class="cv-download">
+                <!-- Data loaded via JS -->
+            </div>
+
+            <div id="copyright-container" class="copyright">
+                <!-- Data loaded via JS -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dynamic Modal Template -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Project Title</h2>
+            
+            <div class="modal-body">
+                <!-- Τα περιεχόμενα (description) θα φορτωθούν δυναμικά από το JS -->
+            </div>
+
+            <a id="modal-github" href="#" target="_blank" class="btn btn-github">
+                <i class="fab fa-github"></i> Δείτε τον κώδικα/αρχεία στο GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+</body>
+</html>
