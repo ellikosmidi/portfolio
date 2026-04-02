@@ -16,24 +16,38 @@ collections:
         label: "Στοιχεία Portfolio"
         file: "data/content.json"
         fields:
+          # --- Ενότητα Theme (Χρώματα) ---
+          - {label: "Χρώμα Θέματος (Buttons/Links)", name: "primary_color", widget: "color"}
+          - {label: "Χρώμα Φόντου Σελίδας", name: "background_color", widget: "color"}
+
+          # --- Ενότητα Navbar (Μενού & Logo) ---
+          - {label: "Κείμενο Λογότυπου", name: "logo_text", widget: "string"}
+          - {label: "Χρώμα Λογότυπου", name: "logo_color", widget: "color", required: false}
+          - {label: "Κείμενο Link: Σχετικά", name: "nav_about_text", widget: "string", required: false}
+          - {label: "Κείμενο Link: Δεξιότητες", name: "nav_skills_text", widget: "string", required: false}
+          - {label: "Κείμενο Link: Projects", name: "nav_projects_text", widget: "string", required: false}
+          - {label: "Κείμενο Link: Εμπειρία", name: "nav_experience_text", widget: "string", required: false}
+          - {label: "Κείμενο Link: Επικοινωνία", name: "nav_contact_text", widget: "string", required: false}
+
           # --- Ενότητα Hero ---
           - {label: "Όνομα", name: "name", widget: "string"}
           - {label: "Επαγγελματικός Τίτλος", name: "job_title", widget: "string"}
           - {label: "Bio (Σύντομο)", name: "bio", widget: "text"}
           - {label: "Φωτογραφία Προφίλ", name: "profile_image", widget: "image"}
-          
-          # --- Ενότητα Theme (Χρώματα) ---
-          - {label: "Χρώμα Θέματος (Buttons/Links)", name: "primary_color", widget: "color"}
-          - {label: "Χρώμα Φόντου", name: "background_color", widget: "color"}
-          
+          - {label: "Κείμενο Κουμπιού 1 (π.χ. Δείτε τα Projects)", name: "hero_btn_projects_text", widget: "string", required: false}
+          - {label: "Κείμενο Κουμπιού 2 (π.χ. Επικοινωνία)", name: "hero_btn_contact_text", widget: "string", required: false}
+
           # --- Ενότητα Skills ---
+          - {label: "Κεντρικός Τίτλος Δεξιοτήτων", name: "skills_section_title", widget: "string", required: false}
+          - {label: "Χρώμα Τίτλου Δεξιοτήτων", name: "skills_title_color", widget: "color", required: false}
+          - {label: "Χρώμα Φόντου Δεξιοτήτων", name: "skills_bg_color", widget: "color", required: false}
           - label: "Κατηγορίες Δεξιοτήτων (Skills Categories)"
             name: "skill_categories"
             widget: "list"
             summary: "{{fields.category_title}}"
             fields:
               - {label: "Τίτλος Κατηγορίας (π.χ. Engineering Software)", name: "category_title", widget: "string"}
-              - {label: "Εικονίδιο FontAwesome (π.χ. fas fa-cogs)", name: "icon", widget: "string", required: false}
+              - {label: "Εικόνα / Εικονίδιο Κάρτας", name: "icon_image", widget: "image", required: false}
               - label: "Λίστα Δεξιοτήτων"
                 name: "skills_list"
                 widget: "list"
@@ -42,6 +56,8 @@ collections:
                   - {label: "Όνομα Δεξιότητας (π.χ. AutoCAD)", name: "name", widget: "string"}
           
           # --- Ενότητα Projects ---
+          - {label: "Τίτλος Ενότητας Projects", name: "projects_section_title", widget: "string", required: false}
+          - {label: "Χρώμα Τίτλου Projects", name: "projects_title_color", widget: "color", required: false}
           - label: "Projects"
             name: "projects"
             widget: "list"
@@ -53,18 +69,24 @@ collections:
               - {label: "Link στο GitHub", name: "github_link", widget: "string", required: false}
 
           # --- Ενότητα Εμπειρία & Εκπαίδευση ---
-          - label: "Χρονολόγιο (Timeline Εμπειρίας/Εκπαίδευσης)"
+          - {label: "Τίτλος Ενότητας Εμπειρίας", name: "experience_section_title", widget: "string", required: false}
+          - {label: "Χρώμα Τίτλου Εμπειρίας", name: "experience_title_color", widget: "color", required: false}
+          - label: "Χρονολόγιο (Timeline)"
             name: "experience"
             widget: "list"
             summary: "{{fields.title}}"
             fields:
               - {label: "Ρόλος / Πτυχίο", name: "title", widget: "string"}
               - {label: "Εταιρεία / Πανεπιστήμιο & Έτος", name: "subtitle", widget: "string"}
-              - {label: "Περιγραφή (Bullet points ή κείμενο)", name: "description", widget: "text"}
+              - {label: "Περιγραφή (Bullet points)", name: "description", widget: "text"}
 
           # --- Ενότητα Επικοινωνία ---
+          - {label: "Τίτλος Ενότητας Επικοινωνίας", name: "contact_section_title", widget: "string", required: false}
+          - {label: "Χρώμα Τίτλου Επικοινωνίας", name: "contact_title_color", widget: "color", required: false}
+          - {label: "Μικρή Περιγραφή Επικοινωνίας", name: "contact_section_desc", widget: "string", required: false}
           - {label: "Email", name: "email", widget: "string", required: false}
           - {label: "LinkedIn Link", name: "linkedin", widget: "string", required: false}
           - {label: "GitHub Link", name: "github", widget: "string", required: false}
           - {label: "Αρχείο Βιογραφικού PDF", name: "cv_file", widget: "file", required: false}
+          - {label: "Κείμενο Κουμπιού Κατεβάσματος", name: "cv_button_text", widget: "string", required: false}
           - {label: "Έτος Copyright", name: "copyright_year", widget: "string", required: false}
