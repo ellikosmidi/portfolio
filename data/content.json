@@ -1,23 +1,17 @@
 {
-  "primary_color": "#003366",
-  "background_color": "#f4f4f4",
-  "logo_image": "assets/images/profile.jpg",
   "logo_text": "Άρης Τσόκας",
-  "logo_color": "#003366",
-  "nav_about_text": "Σχετικά",
-  "nav_skills_text": "Δεξιότητες",
-  "nav_projects_text": "Projects",
-  "nav_experience_text": "Εμπειρία",
-  "nav_contact_text": "Επικοινωνία",
-  "name": "Άρης Τσόκας",
-  "job_title": "Χημικός Μηχανικός | Process Engineer",
-  "bio": "Εξειδικεύομαι στη βελτιστοποίηση χημικών διεργασιών, την ανάλυση δεδομένων παραγωγής και τον σχεδιασμό βιώσιμων λύσεων για τον βιομηχανικό κλάδο.",
-  "profile_image": "assets/images/profile.jpg",
-  "hero_btn_projects_text": "Δείτε τα Projects μου",
-  "hero_btn_contact_text": "Επικοινωνία",
   "skills_section_title": "Core Skills",
-  "skills_title_color": "#333333",
+  "cv_button_color": "#d35400",
+  "profile_image": "/assets/images/134139414979530417.jpg",
   "skills_bg_color": "#ffffff",
+  "primary_color": "#003366",
+  "nav_experience_text": "Εμπειρία",
+  "logo_image": "/assets/images/134139414979530417.jpg",
+  "experience_title_color": "#333333",
+  "bio": "Εξειδικεύομαι στη βελτιστοποίηση χημικών διεργασιών, την ανάλυση δεδομένων παραγωγής και τον σχεδιασμό βιώσιμων λύσεων για τον βιομηχανικό κλάδο.",
+  "nav_contact_text": "Επικοινωνία",
+  "experience_section_title": "Εμπειρία & Εκπαίδευση",
+  "hero_btn_projects_text": "Δείτε τα Projects μου",
   "skill_categories": [
     {
       "category_title": "Engineering Software",
@@ -32,9 +26,26 @@
       ]
     }
   ],
-  "projects_section_title": "Επιλεγμένα Projects",
-  "projects_title_color": "#333333",
+  "contact_section_desc": "Ενδιαφέρεστε για συνεργασία ή θέλετε να συζητήσουμε επαγγελματικές ευκαιρίες; Θα χαρώ να επικοινωνήσουμε!",
+  "experience": [
+    {
+      "title": "Junior Process Engineer",
+      "subtitle": "ChemCorp Industries | 2022 - Σήμερα",
+      "description": "Παρακολούθηση και βελτιστοποίηση παραγωγής 3 βιομηχανικών γραμμών."
+    }
+  ],
+  "name": "Άρης Τσόκας",
+  "cv_button_text": "Download Full CV (PDF)",
+  "nav_skills_text": "Δεξιότητες",
+  "logo_color": "#003366",
+  "background_color": "#f4f4f4",
+  "hero_btn_contact_text": "Επικοινωνία",
+  "copyright_year": "2026",
   "projects_button_text": "Λεπτομέρειες",
+  "job_title": "Χημικός Μηχανικός | Process Engineer",
+  "nav_projects_text": "Projects",
+  "projects_title_color": "#333333",
+  "projects_section_title": "Επιλεγμένα Projects",
   "projects": [
     {
       "title": "Σχεδιασμός Μονάδας",
@@ -44,20 +55,10 @@
       "image": "assets/images/project1.jpg"
     }
   ],
-  "experience_section_title": "Εμπειρία & Εκπαίδευση",
-  "experience_title_color": "#333333",
-  "experience": [
-    {
-      "title": "Junior Process Engineer",
-      "subtitle": "ChemCorp Industries | 2022 - Σήμερα",
-      "description": "Παρακολούθηση και βελτιστοποίηση παραγωγής 3 βιομηχανικών γραμμών."
-    }
-  ],
-  "contact_section_title": "Επικοινωνία",
-  "contact_title_color": "#ffffff",
-  "contact_section_desc": "Ενδιαφέρεστε για συνεργασία ή θέλετε να συζητήσουμε επαγγελματικές ευκαιρίες; Θα χαρώ να επικοινωνήσουμε!",
+  "nav_about_text": "Σχετικά",
+  "projects_button_color": "#7e2121",
   "email": "tsokas.aris.nik@gmail.com",
-  "cv_button_text": "Download Full CV (PDF)",
-  "cv_button_color": "#d35400",
-  "copyright_year": "2026"
+  "contact_title_color": "#ffffff",
+  "skills_title_color": "#333333",
+  "contact_section_title": "Επικοινωνία"
 }
