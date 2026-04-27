@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome για Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Netlify Identity Widget -->
@@ -31,9 +30,21 @@
                 <li><a href="#experience" id="nav-experience">Εμπειρία</a></li>
                 <li><a href="#contact" id="nav-contact">Επικοινωνία</a></li>
             </ul>
-            <button class="mobile-menu-btn" id="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 15px;">
+                <div class="lang-switcher">
+                    <button id="btn-lang-el" class="lang-btn active" title="Ελληνικά">
+                        <span>GR</span>
+                        <img src="assets/icons/gr.png" alt="Greek Flag" class="flag-icon">
+                    </button>
+                    <button id="btn-lang-en" class="lang-btn" title="English">
+                        <span>EN</span>
+                        <img src="assets/icons/gb.png" alt="UK Flag" class="flag-icon">
+                    </button>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -41,8 +52,7 @@
     <section id="about" class="hero section">
         <div class="container hero-container">
             <div class="hero-image">
-                <!-- Fallback σε Unsplash Placeholder αν η τοπική εικόνα απουσιάζει -->
-                <img id="profile-img" src="assets/images/profile.jpg" alt="Επαγγελματική Φωτογραφία" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80'">
+                <img id="profile-img" src="assets/images/profile.jpg" alt="Επαγγελματική Φωτογραφία">
             </div>
             <div class="hero-content">
                 <h1 id="hero-name">Άρης Τσόκας</h1>
@@ -123,7 +133,7 @@
     </div>
 
     <!-- Custom JS -->
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {

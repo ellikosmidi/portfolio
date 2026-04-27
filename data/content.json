@@ -1,29 +1,43 @@
 {
+  "nav_contact_text_en": "Contact",
+  "bio_en": "gshtjjj",
   "logo_text": "Άρης Τσόκας",
-  "skills_section_title": "Core Skills",
-  "cv_button_color": "#d35400",
+  "skills_section_title": "Δεξιότητες",
+  "cv_button_color": "#f66f07",
+  "nav_experience_text_en": "Experience",
+  "copyright_text_en": "2026 Aris Tsokas",
+  "github": "GitHubProfileName",
+  "copyright_text": "2026 Άρης Τσόκας",
   "profile_image": "/assets/images/134139414979530417.jpg",
   "skills_bg_color": "#ffffff",
+  "heading_color": "#2e8a43",
   "primary_color": "#003366",
   "nav_experience_text": "Εμπειρία",
   "logo_image": "/assets/images/134139414979530417.jpg",
-  "experience_title_color": "#333333",
+  "logo_text_en": "Aris Tsokas",
+  "skills_section_title_en": "Skills",
+  "experience_title_color": "#003366",
   "bio": "Εξειδικεύομαι στη βελτιστοποίηση χημικών διεργασιών, την ανάλυση δεδομένων παραγωγής και τον σχεδιασμό βιώσιμων λύσεων για τον βιομηχανικό κλάδο.",
+  "cv_file": "/assets/documents/kosmidi_elli_cv_20250405.pdf",
   "nav_contact_text": "Επικοινωνία",
+  "contact_section_title_en": "Contact",
   "experience_section_title": "Εμπειρία & Εκπαίδευση",
   "hero_btn_projects_text": "Δείτε τα Projects μου",
   "skill_categories": [
     {
-      "category_title": "Engineering Software",
-      "icon_image": "assets/images/project1.jpg",
+      "category_title": "Σοφτγουερ",
+      "icon_image": "assets/images/134139414979530417.jpg",
       "skills_list": [
         {
-          "name": "Python"
+          "name": "Python",
+          "name_en": "δφγηξ"
         },
         {
-          "name": "Aspen Plus"
+          "name": "Aspen Plus",
+          "name_en": "φγηξ"
         }
-      ]
+      ],
+      "category_title_en": "Engineering Software"
     }
   ],
   "contact_section_desc": "Ενδιαφέρεστε για συνεργασία ή θέλετε να συζητήσουμε επαγγελματικές ευκαιρίες; Θα χαρώ να επικοινωνήσουμε!",
@@ -31,34 +45,55 @@
     {
       "title": "Junior Process Engineer",
       "subtitle": "ChemCorp Industries | 2022 - Σήμερα",
-      "description": "Παρακολούθηση και βελτιστοποίηση παραγωγής 3 βιομηχανικών γραμμών."
+      "description": "Παρακολούθηση και βελτιστοποίηση παραγωγής 3 βιομηχανικών γραμμών.",
+      "title_en": "fbjjkl",
+      "subtitle_en": "fghjkl",
+      "description_en": "dfghjkl"
     }
   ],
   "name": "Άρης Τσόκας",
-  "cv_button_text": "Download Full CV (PDF)",
+  "nav_about_text_en": "About",
+  "cv_button_text": "Λήψη Βιογραφικού (PDF)",
   "nav_skills_text": "Δεξιότητες",
+  "projects_section_title_en": "Selected Projects",
   "logo_color": "#003366",
+  "text_color": "#c16a6a",
   "background_color": "#f4f4f4",
+  "nav_projects_text_en": "Projects",
+  "job_title_en": "fshjjd",
+  "projects_button_text_en": "Details",
+  "hero_btn_contact_text_en": "hjkkk",
   "hero_btn_contact_text": "Επικοινωνία",
-  "copyright_year": "2026",
   "projects_button_text": "Λεπτομέρειες",
   "job_title": "Χημικός Μηχανικός | Process Engineer",
-  "nav_projects_text": "Projects",
-  "projects_title_color": "#333333",
+  "nav_projects_text": "Έργα",
+  "projects_title_color": "#003366",
   "projects_section_title": "Επιλεγμένα Projects",
   "projects": [
     {
-      "title": "Σχεδιασμός Μονάδας",
-      "problem": "Υψηλό ενεργειακό κόστος απόσταξης.",
+      "approach_en": "SDFG",
       "approach": "Χρήση Aspen Plus για προσομοίωση εναλλακτικών.",
+      "problem_en": "DFGH",
+      "result_en": "WGHJK",
+      "title_en": "SDFG",
+      "github_link": "link",
+      "title": "Σχεδιασμός Μονάδας",
+      "image": "assets/images/134139414979530417.jpg",
       "result": "Μείωση ενεργειακού κόστους κατά 15%.",
-      "image": "assets/images/project1.jpg"
+      "problem": "Υψηλό ενεργειακό κόστος απόσταξης."
     }
   ],
+  "nav_skills_text_en": "Skills",
+  "cv_button_text_en": "Download Full CV (PDF)",
   "nav_about_text": "Σχετικά",
   "projects_button_color": "#7e2121",
   "email": "tsokas.aris.nik@gmail.com",
   "contact_title_color": "#ffffff",
-  "skills_title_color": "#333333",
+  "name_en": "Aris Tsokas",
+  "hero_btn_projects_text_en": "fghjkk",
+  "linkedin": "LinkedInProfileName",
+  "contact_section_desc_en": "dfrtgyhujik",
+  "skills_title_color": "#003366",
+  "experience_section_title_en": "Experience & Education",
   "contact_section_title": "Επικοινωνία"
 }

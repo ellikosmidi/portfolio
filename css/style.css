@@ -27,6 +27,27 @@
     box-sizing: border-box;
 }
 
+/* Local Icons (Replacing FontAwesome) */
+i.fas, i.fab, i[class*="fa-"] {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    vertical-align: -0.125em; /* Συνήθης ευθυγράμμιση κειμένου */
+}
+
+/* Αντιστοίχιση των κλάσεων στα αρχεία SVG */
+.fa-bars { mask-image: url('../assets/icons/bars.svg'); -webkit-mask-image: url('../assets/icons/bars.svg'); }
+.fa-github { mask-image: url('../assets/icons/github.svg'); -webkit-mask-image: url('../assets/icons/github.svg'); }
+.fa-envelope { mask-image: url('../assets/icons/envelope.svg'); -webkit-mask-image: url('../assets/icons/envelope.svg'); }
+.fa-linkedin { mask-image: url('../assets/icons/linkedin.svg'); -webkit-mask-image: url('../assets/icons/linkedin.svg'); }
+.fa-file-pdf { mask-image: url('../assets/icons/file-pdf.svg'); -webkit-mask-image: url('../assets/icons/file-pdf.svg'); }
+.fa-exclamation-circle { mask-image: url('../assets/icons/circle-exclamation.svg'); -webkit-mask-image: url('../assets/icons/circle-exclamation.svg'); }
+.fa-tools { mask-image: url('../assets/icons/screwdriver-wrench.svg'); -webkit-mask-image: url('../assets/icons/screwdriver-wrench.svg'); }
+.fa-check-circle { mask-image: url('../assets/icons/circle-check.svg'); -webkit-mask-image: url('../assets/icons/circle-check.svg'); }
+
 html {
     scroll-behavior: smooth;
 }
@@ -206,6 +227,47 @@ img {
 
 .nav-links a:hover {
     color: var(--accent);
+}
+
+.lang-switcher {
+    display: flex;
+    gap: 5px;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 2px 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: var(--transition);
+}
+
+.lang-btn span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+.flag-icon {
+    width: 24px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: var(--shadow-sm);
+}
+
+.lang-btn:hover {
+    opacity: 0.8;
+}
+
+.lang-btn.active {
+    opacity: 1;
+    border-bottom: 3px solid var(--primary);
+    background-color: transparent;
 }
 
 .mobile-menu-btn {
@@ -481,6 +543,24 @@ img {
     margin-bottom: 40px;
 }
 
+.cv-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cv-btn:hover {
+    filter: brightness(1.15); /* Φωτίζει ελαφρώς το δυναμικό χρώμα */
+    transform: translateY(-4px); /* Ανασηκώνεται ελαφρώς */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
 .copyright {
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 20px;
@@ -492,7 +572,6 @@ img {
    Modal Template
    ========================================= */
 .modal {
-    display: none;
     position: fixed;
     z-index: 2000;
     left: 0;
@@ -500,10 +579,17 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.6);
+    display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal-content {
@@ -625,4 +711,88 @@ img {
     .timeline-item:nth-child(even) .timeline-dot {
         left: -8px;
     }
+}
+
+/* =========================================
+   Media Queries (Mobile Phones)
+   ========================================= */
+@media (max-width: 767px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        padding: 10px 0;
+    }
+    
+    .nav-links.nav-active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block !important;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+/* =========================================
+   Dynamic CMS Overrides
+   ========================================= */
+.logo {
+    color: var(--logo-color, var(--primary));
+}
+.logo-img {
+    display: none;
+}
+.logo-img.show {
+    display: block;
+}
+
+#skills-section-title { color: var(--skills-title-color, var(--primary)); }
+#skills { background-color: var(--skills-bg-color, var(--bg-main)); }
+
+.skill-icon-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.skill-icon-img {
+    max-width: 70px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+#projects-section-title { color: var(--projects-title-color, var(--primary)); }
+#experience-section-title { color: var(--experience-title-color, var(--primary)); }
+
+.timeline-desc {
+    white-space: pre-wrap;
+}
+
+#contact-section-title { color: var(--contact-title-color, #fff); }
+
+.cv-btn {
+    background-color: var(--cv-btn-color, var(--accent));
+    border: 2px solid var(--cv-btn-color, var(--accent));
+}
+
+.copyright-credits {
+    margin-top: 10px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+.linkedin-credit-link {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 5px;
 }
